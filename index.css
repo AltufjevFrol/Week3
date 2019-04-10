@@ -1,20 +1,29 @@
 body {
-	margin:0;
-	padding: 0;
+	outline: 1px dashed red;
+	margin:auto;
+	padding: 2%;
+	width: 90%;
+	flex-flow: row wrap;
+	display: flex;
+	justify-content: space-between;
 }
 
 header {
-
+	outline: 1px dashed red;
+	flex-basis: 100%;
 }
 
 footer {
-	position: absolute;
-	left: 0;
-	bottom: 0;
+	outline: 1px dashed red;
+	flex-basis: 100%;
 }
 
-main {
-	margin: 5%;
-	display: flex;
-	justify-content: space-between;
+section.gallery {
+	outline: 1px dashed red;
+	flex-basis: 60%;
+}
+.menu, .rating {
+	outline: 1px dashed red;
+	flex-grow: 1;
+	flex-shrink:2
 }
