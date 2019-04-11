@@ -5,7 +5,7 @@ body {
 	width: 90%;
 	flex-flow: row wrap;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 
 }
 
@@ -23,36 +23,38 @@ footer {
 
 section.gallery {
 	outline: 1px dashed red;
-	flex-basis: 55%;
+	flex-basis: 60%;
 	flex-grow: 1;
 	margin: auto;
 }
 
 .menu,.rating {
 	outline: 1px dashed red;
-	flex-shrink:2;
-	overflow: auto;
+	flex-shrink:1;
+	overflow: hidden;
+	flex-basis: 20%;
 
 }
 
 section.gallery {
 	display: flex;
 	flex-flow: row wrap;
-	margin: auto;
+	justify-content: space-around;
+	
 }
 
 .cat {
 	height: 180px;
-	flex-basis: 30%;
+	flex-basis: 33.333%;
 	outline: 1px dashed red;
-	margin: auto;
+
 
 }
 
 .cat2,.cat6 {
-	flex-basis: 60%;
+
 }
 
 .cat8 {
-	flex-basis: 95%;
+
 }
