@@ -2,38 +2,42 @@ body {
 	outline: 1px dashed red;
 	margin:auto;
 	width: 95%;
-	height: 900px;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-content: space-around;
+	display: grid;
+	grid-template-rows: 50px 700px 50px;
+	grid-template-columns: 18% 1fr 18%;
+	grid-template-areas: "header header header"
+												"menu gallery rating"
+												"footer footer footer";
+	grid-gap: 1%;
 }
 
 header {
 	outline: 1px dashed red;
-	width: 98%;
+	grid-area: header;
 }
 
 footer {
 	outline: 1px dashed red;
-	width: 98%;
-
+	grid-area: footer;
 }
 
 section.gallery {
 	outline: 1px dashed red;
-	width: 58%;
-	height: 700px;
+	grid-area: gallery;
 }
 
-.menu,.rating {
+.menu {
 	outline: 1px dashed red;
 	overflow: hidden;
-	width: 18%;
+	grid-area: menu;
 }
 
 .rating {
-	align-self: flex-start;
+	outline: 1px dashed red;
+	overflow: hidden;
+	grid-area: rating;
+	align-self: start;
+	height: auto;
 }
 
 section.gallery {
