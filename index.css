@@ -124,8 +124,24 @@ li{
 {
 	body{
 		flex-flow: column nowrap;
+		height: 1100px;
 	}
 	.menu, section.gallery, .rating, footer, header {
 		width: 100%;
+	}
+	ul {
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	}
+
+	li {
+		height: auto;
+		padding: 0 0 0 0;
+		font: bold 20px "Arial";
+/*		outline: 1px dashed red;*/
+	}
+
+	.gallery {
+		height: 500px;
 	}
 }
