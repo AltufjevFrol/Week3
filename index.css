@@ -49,7 +49,7 @@ footer {
 	grid-template-columns: 1fr, 1fr, 1fr;
 	grid-template-rows: repeat(4, 250px);
 	grid-auto-rows: 250px;
-	/* grid-auto-flow: dense; */
+	grid-gap: 5px;
 }
 
 .menu {
@@ -63,12 +63,6 @@ footer {
 	flex: 2;
 	align-self: flex-start;
 	margin-left: 0.3%;
-}
-
-
-
-.cat {
-
 }
 
 .cat:nth-child(2n) {
@@ -86,15 +80,31 @@ footer {
 	grid-row: span 1;
 }
 
-/* .cat2,.cat6 {
-grid-column: span 2;
-grid-row: span 1;
+.cat {
+	overflow: hidden;
+	position: relative;
 }
 
-.cat8 {
-grid-column: span 3;
-grid-row: span 1;
-} */
+.name {
+	position: absolute;
+	top: 75%;
+	left:0;
+	padding: 15px;
+	background:#1C1C1CBF;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	color: white;
+	font: 1.2em Pasifico;
+	white-space: nowrap;
+	overflow: hidden;
+	transform-origin: top right;
+	transform: translate(-100%, 0);
+}
+
+.cat:hover .name {
+	transform: translate(0, 0);
+	transition: transform 200ms ease;
+}
 
 .cat1 {
 	background: url(img/2.jpg) center/cover no-repeat;
