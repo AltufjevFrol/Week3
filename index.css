@@ -24,8 +24,9 @@ header {
 	outline: 1px dashed red;
 }
 h1 {
-	margin: 0;
+	margin: 10px;
 	padding: 0;
+	font: 3em Pasifico;
 }
 
 footer {
@@ -127,12 +128,11 @@ footer {
 .cat7 {
 	background: url(img/8.jpg) center/cover no-repeat;
 }
+
 .cat8 {
 	background: url(img/10.jpg) center/cover no-repeat;
 }
 
-
-/*доп*/
 .cat9 {
 	background: url(img/2.jpg) center/cover no-repeat;
 }
@@ -153,20 +153,116 @@ footer {
 	background: url(img/6.jpg) center/cover no-repeat;
 }
 
+.cat14 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat15 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat16 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat17 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat18 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat19 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat20 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat21 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat22 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat23 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat24 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat25 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.cat26 {
+	background: url(img/6.jpg) center/cover no-repeat;
+}
+
+.selection {
+	display: none;
+}
+
 ul {
 	margin:0;
 	padding: 0;
 	list-style: none;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	outline: 1px dashed red;
 }
 
 li{
-	border-bottom:2px solid white;
-	padding: 20px 0 0 15px;
+	border-bottom: 2px solid transparent; 
+	border-image: linear-gradient(to right, transparent 0%, #699495FF 50%, #699495FF 50%, transparent 100%);
+	border-image-slice: 1;
+	padding: 0;
+	margin: 10px;
 	font: bold 16px "Arial";
-
 }
 
+#abs:checked ~ .wrap .abs {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
 
+#brit:checked ~ .wrap .brit {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+#rus:checked ~ .wrap .rus {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+#siam:checked ~ .wrap .siam {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+#abs:checked ~ .wrap .cat:not([data-sort="abs"]) {
+	filter: blur(10px);
+}
+
+#brit:checked ~ .wrap .cat:not([data-sort="brit"]) {
+	filter: blur(10px);
+}
+
+#rus:checked ~ .wrap .cat:not([data-sort="rus"]) {
+	filter: blur(10px);
+}
+
+#siam:checked ~ .wrap .cat:not([data-sort="siam"]) {
+	filter: blur(10px);
+}
 /* 
 @media screen and (max-width: 700px)
 {
