@@ -16,13 +16,17 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	background: #C2D8DAFF;
-	outline: 1px dashed red;
+	min-width: 380px;
 }
 
-header {
-	text-align: center;
-	outline: 1px dashed red;
+.selection {
+	display: none;
 }
+
+body>header {
+	text-align: center;
+}
+
 h1 {
 	margin: 10px;
 	padding: 0;
@@ -30,40 +34,117 @@ h1 {
 }
 
 footer {
-	outline: 1px dashed red;
 	margin:0;
+	border-top: 1px solid #42686AFF;
+}
+
+footer p {
+	float: left;
+	margin: 10px;
+	font: bold 0.8em Arial;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+footer address {
+	float: right;
+	margin: 10px;
+	font: bold 0.8em Arial;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .wrap {
 	display: flex;
-	outline: 1px dashed red;
 	padding: 2%;
 	justify-content: space-around;
 }
 
+/* стили для меню */
+.menu {
+	flex: 2;
+	margin-right: 1%;
+	background: #A9C8CAFF;
+	overflow: hidden;
+}
 
+ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
 
+li {
+	border-bottom: 2px solid transparent;	
+	border-image:
+	linear-gradient(to right, transparent 0%,
+	#699495FF 50%,
+	#699495FF 50%,
+	transparent 100%);
+	border-image-slice: 1;
+	padding: 0;
+	margin: 10px;
+	font: bold 1em "Arial";
+	text-align: center;
+}
+
+label {
+	white-space: nowrap;
+}
+
+/* стили для выбранных категорий котиков */
+#abs:checked ~ .wrap .abs {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+#brit:checked ~ .wrap .brit {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+#rus:checked ~ .wrap .rus {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+#siam:checked ~ .wrap .siam {
+	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
+	border-image-slice: 1;
+} 
+
+/* стили для фоток выбранных категорий котиков */
+.selection:checked ~ .wrap .cat {
+	filter: blur(10px);
+}
+
+#abs:checked ~ .wrap .cat[data-sort="abs"] {
+	filter: none;
+}
+
+#brit:checked ~ .wrap .cat[data-sort="brit"] {
+	filter: none;
+}
+
+#rus:checked ~ .wrap .cat[data-sort="rus"] {
+	filter: none;
+}
+
+#siam:checked ~ .wrap .cat[data-sort="siam"] {
+	filter: none;
+}
+
+/* стили для галереи */
 .gallery {
-	outline: 1px dashed red;
-	flex: 6;
+	flex: 8;
 	display: grid;
 	grid-template-columns: 1fr, 1fr, 1fr;
 	grid-template-rows: repeat(4, 250px);
 	grid-auto-rows: 250px;
 	grid-gap: 5px;
-}
-
-.menu {
-	outline: 1px dashed red;
-	flex: 2;
-	margin-right: 1%;
-}
-
-.rating {
-	outline: 1px dashed red;
-	flex: 2;
-	align-self: flex-start;
-	margin-left: 0.3%;
 }
 
 .cat:nth-child(2n) {
@@ -86,6 +167,7 @@ footer {
 	position: relative;
 }
 
+/* плашки с именами котиков */
 .name {
 	position: absolute;
 	top: 75%;
@@ -107,185 +189,246 @@ footer {
 	transition: transform 200ms ease;
 }
 
+
+/* фотки котиков */
 .cat1 {
-	background: url(img/2.jpg) center/cover no-repeat;
+	background: url(img/v/1.jpg) center/cover no-repeat;
 }
 .cat2 {
-	background: url(img/3.jpg) center/cover no-repeat;
+	background: url(img/g/3.jpg) center/cover no-repeat;
 }
 .cat3 {
-	background: url(img/4.jpg) center/cover no-repeat;
+	background: url(img/v/2.jpg) center/cover no-repeat;
 }
 .cat4 {
-	background: url(img/5.jpg) center/cover no-repeat;
+	background: url(img/v/3.jpg) center/cover no-repeat;
 }
 .cat5 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/4.jpg) center/cover no-repeat;
 }
 .cat6 {
-	background: url(img/7.jpg) center/cover no-repeat;
+	background: url(img/g/2.jpg) center/cover no-repeat;
 }
 .cat7 {
-	background: url(img/8.jpg) center/cover no-repeat;
+	background: url(img/v/5.jpg) center/cover no-repeat;
 }
 
 .cat8 {
-	background: url(img/10.jpg) center/cover no-repeat;
+	background: url(img/g/1.jpg) center/cover no-repeat;
 }
 
 .cat9 {
-	background: url(img/2.jpg) center/cover no-repeat;
+	background: url(img/v/5.jpg) center/cover no-repeat;
 }
 
 .cat10 {
-	background: url(img/3.jpg) center/cover no-repeat;
+	background: url(img/g/3.jpg) center/cover no-repeat;
 }
 
 .cat11 {
-	background: url(img/4.jpg) center/cover no-repeat;
+	background: url(img/v/4.jpg) center/cover no-repeat;
 }
 
 .cat12 {
-	background: url(img/5.jpg) center/cover no-repeat;
+	background: url(img/v/3.jpg) center/cover no-repeat;
 }
 
 .cat13 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/2.jpg) center/cover no-repeat;
 }
 
 .cat14 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/g/1.jpg) center/cover no-repeat;
 }
 
 .cat15 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/1.jpg) center/cover no-repeat;
 }
 
 .cat16 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/g/2.jpg) center/cover no-repeat;
 }
 
 .cat17 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/2.jpg) center/cover no-repeat;
 }
 
 .cat18 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/g/1.jpg) center/cover no-repeat;
 }
 
 .cat19 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/4.jpg) center/cover no-repeat;
 }
 
 .cat20 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/3.jpg) center/cover no-repeat;
 }
 
 .cat21 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/5.jpg) center/cover no-repeat;
 }
 
 .cat22 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/g/2.jpg) center/cover no-repeat;
 }
 
 .cat23 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/3.jpg) center/cover no-repeat;
 }
 
 .cat24 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/g/3.jpg) center/cover no-repeat;
 }
 
 .cat25 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/v/1.jpg) center/cover no-repeat;
 }
 
 .cat26 {
-	background: url(img/6.jpg) center/cover no-repeat;
+	background: url(img/g/1.jpg) center/cover no-repeat;
 }
 
-.selection {
+/* стили для рейтинга */
+.rating {
+	flex: 2;
+	align-self: flex-start;
+	margin-left: 0.3%;
+	background: #A9C8CAFF;
+	padding-left: 1%;
+	padding-right: 2%;
+}
+
+.checkbox{
+	width: 10px;
+	height: 10px;
+	margin-left: 5px;
+	display: inline-block;
+	background: white;
+}
+
+label[for="sort"]{
+	display: block;
+	text-align: right;
+	font: 0.8em Arial;
+}
+
+#sort {
 	display: none;
 }
 
-ul {
+.rating h2, .rating h3 {
 	margin:0;
-	padding: 0;
-	list-style: none;
+}
+
+.rating h2 {
+	text-transform: uppercase;
+	font: 1.5em Arial;
+	color: #FF0000FF;
+}
+
+.rating_bar {
 	display: flex;
 	flex-flow: column nowrap;
-	align-items: center;
-	outline: 1px dashed red;
+	justify-content: space-between;
 }
 
-li{
-	border-bottom: 2px solid transparent; 
-	border-image: linear-gradient(to right, transparent 0%, #699495FF 50%, #699495FF 50%, transparent 100%);
-	border-image-slice: 1;
-	padding: 0;
-	margin: 10px;
-	font: bold 16px "Arial";
+.rating_bar > div {
+	display: grid;
+	grid-template-columns: 8fr 2fr;
+	grid-template-rows: repeat(2, 25px);
+	grid-template-areas: "head head"
+												"bar num";
+	overflow: hidden;
 }
 
-#abs:checked ~ .wrap .abs {
-	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
-	border-image-slice: 1;
+.rating_bar h3 {
+	font: bold 1em "Arial";
+	grid-area:  head;
+	justify-self: start;
+	align-self: end;
+	white-space: nowrap;
+	
+}
+
+.bar {
+	grid-column: span 2;
+	grid-area: bar;
+	width: 100%;
+	height: 50%;
+	align-self: center;
+
+}
+
+div[data-range="4"] {
+	background: linear-gradient(to right, #FF0000FF,transparent 40%);
+	/* border: 1px solid #42686AFF; */
+}
+
+div[data-range="8"] {
+	background: linear-gradient(to right, #FF0000FF,transparent 80%);
+	/* border: 1px solid #42686AFF; */
+}
+
+div[data-range="9"] {
+	background: linear-gradient(to right, #FF0000FF,transparent 90%);
+	/* border: 1px solid #42686AFF; */
+}
+
+div[data-range="10"] {
+	background: linear-gradient(to right, #FF0000FF,transparent 100%);
+	/* border: 1px solid #42686AFF; */
+}
+
+.num {
+	grid-area: num;
+	align-self: center;
+	justify-self: start;
+	margin: 20%;
+	font: bold 1.2em Arial;
+}
+
+/* упорядочивание по возрастанию */
+input:checked ~ .rating_bar div.range9 {
+	order: 9;
+}
+
+input:checked ~ .rating_bar div.range8 {
+	order: 8;
+}
+
+input:checked ~ .rating_bar div.range10 {
+	order: 10;
+}
+
+input:checked ~ .rating_bar div.range4 {
+	order: 4;
+}
+
+
+input:checked ~ header .checkbox {
+	background: black;
 } 
 
-#brit:checked ~ .wrap .brit {
-	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
-	border-image-slice: 1;
-} 
+/* немного адаптива */
+@media screen and (max-width: 900px){
 
-#rus:checked ~ .wrap .rus {
-	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
-	border-image-slice: 1;
-} 
-
-#siam:checked ~ .wrap .siam {
-	border-image: linear-gradient(to right, transparent 0%, #FF000EFF 50%, #FF000EFF 50%, transparent 100%);
-	border-image-slice: 1;
-} 
-
-#abs:checked ~ .wrap .cat:not([data-sort="abs"]) {
-	filter: blur(10px);
-}
-
-#brit:checked ~ .wrap .cat:not([data-sort="brit"]) {
-	filter: blur(10px);
-}
-
-#rus:checked ~ .wrap .cat:not([data-sort="rus"]) {
-	filter: blur(10px);
-}
-
-#siam:checked ~ .wrap .cat:not([data-sort="siam"]) {
-	filter: blur(10px);
-}
-/* 
-@media screen and (max-width: 700px)
-{
-	body{
+	.wrap {
 		flex-flow: column nowrap;
-		height: 1100px;
-	}
-	.menu, section.gallery, .rating, footer, header {
-		width: 100%;
-	}
-	ul {
-	flex-flow: row nowrap;
-	justify-content: space-around;
 	}
 
-	li {
-		height: auto;
-		padding: 0 0 0 0;
-		font: bold 20px "Arial";
-outline: 1px dashed red;
+	.menu{
+		margin: 0;
 	}
 
-	.gallery {
-		height: 500px;
+	.rating {
+		margin: 0;
+		align-self: initial;
 	}
-} */
+
+	footer p, footer address {
+		float: initial;
+	}
+
+}
+

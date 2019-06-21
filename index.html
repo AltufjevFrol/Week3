@@ -6,10 +6,10 @@
 	<title>Cat</title>
 </head>
 <body>
-	<input class="selection" name="menu" type="radio" id="abs">
-	<input class="selection" name="menu" type="radio" id="brit">
-	<input class="selection" name="menu" type="radio" id="rus">
-	<input class="selection" name="menu" type="radio" id="siam">
+	<input class="selection" name="menu" type="checkbox" id="abs">
+	<input class="selection" name="menu" type="checkbox" id="brit">
+	<input class="selection" name="menu" type="checkbox" id="rus">
+	<input class="selection" name="menu" type="checkbox" id="siam">
 
 	<header><h1>Бабуленькины котятки</h1></header>
 
@@ -36,81 +36,106 @@
 				<div class="cat cat4" data-sort ="brit">
 					<div class="name ">Муни, 1 года</div>
 				</div>
-				<div class="cat cat5" data-sort ="">
+				<div class="cat cat5" data-sort ="abs">
 					<div class="name ">Смоки, 3 года</div>
 				</div>
-				<div class="cat cat6" data-sort ="">
+				<div class="cat cat6" data-sort ="rus">
 					<div class="name ">Вельвет, 6 года</div>
 				</div>
-				<div class="cat cat7" data-sort ="">
+				<div class="cat cat7" data-sort ="brit">
 					<div class="name ">Фрея, 4 года</div>
 				</div>
-				<div class="cat cat8" data-sort ="">
+				<div class="cat cat8" data-sort ="abs">
 					<div class="name ">Руни, 3 года</div>
 				</div>
-				<div class="cat cat9" data-sort ="">
+				<div class="cat cat9" data-sort ="brit">
 					<div class="name ">Поль, 3 года</div>
 				</div>
-				<div class="cat cat10" data-sort ="">
+				<div class="cat cat10" data-sort ="siam">
 					<div class="name ">Мышка, 5 года</div>
 				</div>
-				<div class="cat cat11" data-sort ="">
+				<div class="cat cat11" data-sort ="brit">
 					<div class="name ">Хайди, 3 года</div>
 				</div>
-				<div class="cat cat12" data-sort ="">
+				<div class="cat cat12" data-sort ="abs">
 					<div class="name ">Соль, 3 года</div>
 				</div>
-				<div class="cat cat13" data-sort ="">
+				<div class="cat cat13" data-sort ="rus">
 					<div class="name ">Айрис, 3 года</div>
 				</div>
-				<div class="cat cat14" data-sort ="">
+				<div class="cat cat14" data-sort ="brit">
 					<div class="name ">Дарт, 2 года</div>
 				</div>
-				<div class="cat cat15" data-sort ="">
+				<div class="cat cat15" data-sort ="abs">
 					<div class="name ">Блек, 7 года</div>
 				</div>
-				<div class="cat cat16" data-sort ="">
+				<div class="cat cat16" data-sort ="brit">
 					<div class="name ">Чоко, 3 года</div>
 				</div>
-				<div class="cat cat17" data-sort ="">
+				<div class="cat cat17" data-sort ="siam">
 					<div class="name ">Яврик, 3 года</div>
 				</div>
-				<div class="cat cat18" data-sort ="">
+				<div class="cat cat18" data-sort ="brit">
 					<div class="name ">Ачи, 3 года</div>
 				</div>
-				<div class="cat cat19" data-sort ="">
+				<div class="cat cat19" data-sort ="siam">
 					<div class="name ">Сафира, 7 года</div>
 				</div>
-				<div class="cat cat20" data-sort ="">
+				<div class="cat cat20" data-sort ="brit">
 					<div class="name ">Фарро, 3 года</div>
 				</div>
-				<div class="cat cat21" data-sort ="">
+				<div class="cat cat21" data-sort ="abs">
 					<div class="name ">Иффи, 6 года</div>
 				</div>
-				<div class="cat cat22" data-sort ="">
+				<div class="cat cat22" data-sort ="brit">
 					<div class="name ">Самур, 6 года</div>
 				</div>
-				<div class="cat cat23" data-sort ="">
+				<div class="cat cat23" data-sort ="rus">
 					<div class="name ">Дарлинг, 6 года</div>
 				</div>
-				<div class="cat cat24" data-sort ="">
+				<div class="cat cat24" data-sort ="brit">
 					<div class="name ">Квентин, 3 года</div>
 				</div>
-				<div class="cat cat25" data-sort ="">
+				<div class="cat cat25" data-sort ="siam">
 					<div class="name ">Лаффи, 3 года</div>
 				</div>
-				<div class="cat cat26" data-sort ="">
+				<div class="cat cat26" data-sort ="brit">
 					<div class="name ">Гресси, 3 года</div>
 				</div>
 			</section>
 
 			<section class="rating">
-				<h2>Рейтинг</h2>
 				<input id="sort" type="checkbox">
-				<label for="sort">По убыванию</label>
+				<header>
+					<h2>Рейтинг</h2>
+							<label for="sort">по убыванию<div class="checkbox"></div>
+							</label>
+							
+				</header>
+				<article class="rating_bar">
+					<div class="range9">
+						<h3>Абиссинская</h3>
+						<div class="bar" data-range="9"></div>
+						<div class="num">9</div></div>
+					<div class="range8">
+						<h3>Британская</h3>
+						<div class="bar" data-range="8"></div>
+						<div class="num">8</div>
+					</div>
+					<div class="range10">
+						<h3>Русская голубая</h3>
+						<div class="bar" data-range="10"></div>
+						<div class="num">10</div>
+					</div>
+					<div class="range4">
+						<h3>Сиамская</h3>
+						<div class="bar" data-range="4"></div>
+						<div class="num">4</div>
+					</div>
+				</article>
 			</section>
 	</section>
 
-	<footer><p>ООО Бабуленькины котятки</p> <address>Наш адрес: Котейкина улица д 5</address></footer>
+	<footer><p>ООО Бабуленькины котятки</p> <a href="https://yandex.ru/maps/-/CCWYyFly"><address>Наш адрес: Котейкина улица д 5</address></a></footer>
 </body>
 </html>
