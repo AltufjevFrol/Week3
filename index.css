@@ -411,7 +411,7 @@ input:checked ~ header .checkbox {
 } 
 
 /* немного адаптива */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px), (orientation: portrait) {
 
 	.wrap {
 		flex-flow: column nowrap;
